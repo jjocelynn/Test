@@ -45,6 +45,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     saveBook: async (parent, { input }, context) => {
       if (!context.user) {
         throw new AuthenticationError("Not authenticated");
